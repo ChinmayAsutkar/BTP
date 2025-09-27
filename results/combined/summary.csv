@@ -1,0 +1,2 @@
+model,original_output_path,combined_output_path
+depth_anything,results/depth_anything/frame_0.png,results/combined/depth_anything__frame_0.png

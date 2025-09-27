@@ -54,6 +54,6 @@ docs/_build/
 test.*
 models/depth_models/Depth_Anything_V2/checkpoints
 *.pt 
-results
+# results
 out
 zed
