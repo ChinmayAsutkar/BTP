@@ -15,6 +15,7 @@ from depth_inference.metric3d_inference import Metric3DInference
 from depth_inference.marigold_inference import MarigoldInference
 
 
+
 AVAILABLE_MODELS = [
     'depth_anything',
     'midas',

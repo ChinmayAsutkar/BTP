@@ -52,7 +52,7 @@ docs/_build/
 .DS_Store
 .vscode
 test.*
-models/depth_models/Depth_Anything_V2/checkpoints
+models/depth_models/Depth_Anyth/Users/chinmayasutkar/Downloads/CE498_Midterm_Writeup_220104xxx.docxing_V2/checkpoints
 *.pt 
 # results
 out

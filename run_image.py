@@ -16,6 +16,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+
     # depth_anything = DepthAnythingV2Inference(input_path=args.input_path)
     # monodepth = MonoDepth2Inference(input_path=args.input_path)
 
