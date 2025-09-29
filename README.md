@@ -10,27 +10,28 @@ Monogaze1 is a unified pipeline for running multiple depth estimation and object
 - Organized structure for models, assets, and results.
 
 ## File Structure
+
+```plaintext
 Monogaze1/
-├── depthfm_inference.py
-├── eval_image.py
-├── eval_video.py
-├── monovit_inference.py
-├── run_all_models_image.py
-├── run_image.py
-├── run_video.py
-├── requirements.txt
-├── README.md
+│── depthfm_inference.py
+│── eval_image.py
+│── eval_video.py
+│── monovit_inference.py
+│── run_all_models_image.py
+│── run_image.py
+│── run_video.py
+│── requirements.txt
+│── README.md
 │
 ├── depth_inference/
-│   ├── depth_anything_v2.py
-│   ├── depthfm_inference.py
-│   ├── hrdepth_inference.py
-│   ├── marigold_inference.py
-│   ├── metric3d_inference.py
-│   ├── midas_inference.py
-│   ├── monodepth2.py
-│   ├── unidepth.py
-│   └── zeodepth_inference.py
+│   │── depth_anything_v2.py
+│   │── depthfm_inference.py
+│   │── hrdepth_inference.py
+│   │── marigold_inference.py
+│   │── metric3d_inference.py
+│   │── midas_inference.py
+│   │── monodepth2.py
+│   └── unidepth.py
 │
 ├── models/
 │   ├── depth_models/
