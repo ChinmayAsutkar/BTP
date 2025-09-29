@@ -1,58 +1,42 @@
+# Monogaze1
 
-![WhatsApp Image 2024-08-19 at 14 09 44](https://github.com/user-attachments/assets/8934eebd-1de8-4d34-9c5f-b9188fa12f10)
+Monogaze1 is a unified pipeline for running multiple depth estimation and object detection models on images and videos. It enables easy experimentation, benchmarking, and visualization of results from state-of-the-art computer vision models.
 
-# Inter-Vechicular Depth Estimation from RGB Camera Feed
+## Features
+
+- Run depth estimation on images and videos using various models.
+- Perform object detection and segmentation.
+- Aggregate and visualize results for comparison.
+- Organized structure for models, assets, and results.
+
+## File Structure
+Monogaze1/ │ ├── depthfm_inference.py ├── eval_image.py ├── eval_video.py ├── monovit_inference.py ├── run_all_models_image.py ├── run_image.py ├── run_video.py ├── requirements.txt ├── README.md │ ├── depth_inference/ │ ├── depth_anything_v2.py │ ├── depthfm_inference.py │ ├── hrdepth_inference.py │ ├── marigold_inference.py │ ├── metric3d_inference.py │ ├── midas_inference.py │ ├── monodepth2.py │ ├── unidepth.py │ ├── zeodepth_inference.py │ ├── models/ │ ├── depth_models/ │ │ ├── Depth_Anything_V2/ │ │ ├── DepthFM/ │ │ ├── HRDepth/ │ │ ├── Marigold/ │ │ ├── Metric3D/ │ │ ├── MiDaS/ │ │ ├── Mono_Depth_2/ │ │ ├── Unidepth/ │ │ ├── ZoeDepth/ │ ├── detection_models/ │ │ ├── bounding_box/ │ │ ├── segmentation/ │ ├── detection_models/ │ ├── bounding_box/ │ │ ├── yolov8n.pt │ │ ├── yolov8x.pt │ ├── segmentation/ │ ├── assets/ │ ├── test/ │ │ ├── image.jpg │ │ ├── video.mp4 │ ├── results/ │ ├── combined/ │ ├── depth_anything/ │ ├── depthfm/ │ ├── hrdepth/ │ ├── marigold/ │ ├── metric3d/ │ ├── midas/ │ ├── monodepth2/ │ ├── unidepth/ │ ├── zoedepth/ │ └── utils/ ├── constants.py ├── detection.py ├── generic.py
 
 
-## About The Project
+## Included Models
 
-This project focuses on the estimation of headway, the distance between a vehicle and the vehicle directly in front, using depth estimation from monocular RGB video feeds. By leveraging deep learning techniques, the project aims to derive accurate distance measurements, which are crucial for understanding driving patterns in congested urban environments, particularly in Guwahati City.
-### Prerequisites
+### Depth Estimation Models
+- Depth Anything V2
+- DepthFM
+- HRDepth
+- Marigold
+- Metric3D
+- MiDaS
+- MonoDepth2
+- Unidepth
+- ZoeDepth
 
-The primary objectives of this research are:
+### Detection Models
+- YOLOv8 (bounding box detection)
+- Segmentation models (e.g., SAM2)
 
-1. Depth Estimation: Utilisation deep learning algorithms to extract depth information from monocular RGB video feeds, allowing for the estimation of distance to the vehicle ahead.
-
-2. Headway Calculation: Derive the estimated headway between the host vehicle and the vehicle directly in front, providing essential data for analysing driving behaviour.
-
-3. Behavorial Analysis: Integrate additional parameters such as driver speed, acceleration, and concentration, assessed through facial emotion detection, to develop a comprehensive understanding of driving patterns in highly congested areas.
-
-4. Road Safety Improvement: Utilise the insights gained from the analysis to propose measures aimed at enhancing road safety and understanding driver responses to various stimuli.
 ## Usage
 
-This research lays the groundwork for further studies in driver behavior and safety enhancements in urban settings. Future work may include:
+1. Place your input images/videos in `assets/test/`.
+2. Run scripts such as `run_image.py` or `run_video.py` to process inputs.
+3. Results will be saved in the `results/` directory for each model.
+4. Compare and visualize outputs using the generated images and CSV files.
 
-1. Expanding the dataset to include various traffic conditions.
-2. Enhancing the depth estimation model for increased accuracy in diverse environmental conditions.
-3. Exploring the impact of environmental factors on driver behaviour.
-## Getting Started
+## Requirements
 
-1. Clone repository.
-2. Download proper model (based on environment of use) from [here](https://github.com/DepthAnything/Depth-Anything-V2/tree/main/metric_depth#pre-trained-models) and save in `assets/Depth_Anything_V2/checkpoints` folder.
-3. Download test images/video for prediction into `test` folder.
-4. Move to the base folder and run ``` pip install -r requirements.txt```. It is preferable to use a conda environment. Tested for python==3.11.5
-5. The environment is ready to run. Use the following code in terminal:
-> For Image:
-
-```python run_image.py --input-path <path-to-input-directory> --outdir <path-to-output-directory> --encoder <vits/vitb/vitl/vitg> --max-depth <numeric-values-in-meters>```
-
-> For Image:
-
-```python run_video.py --input-path <path-to-input-directory> --outdir <path-to-output-directory> --encoder <vits/vitb/vitl/vitg> --max-depth <numeric-values-in-meters>```
-
-Demo Result: [YouTube](https://www.youtube.com/watch?v=dbGtP_d9eHU)
-
-Replace arguments with correct alternatives.
-## Roadmap
-
-- [x] Estimate depth in ambient lighting conditions
-- [x] Detect for Cars using prebuilt Roboflow Model.
-- [x] Develop custom model for multiple vehicle headway detection and increased detection accuracy.
-- [x] Integration with Stereo-Camera data for validation figures (Ongoing)
-- [ ] Integration with Driver Behaviour Model
-## License
-
-Distributed under the MIT License. See [MIT License](https://opensource.org/licenses/MIT) for more information.
-## Contact
-
-[Aditya Paul - Website](https://aditya-pauls-portfolio.vercel.app/) - [LinkedIn](https://www.linkedin.com/in/adityapaul03/) - adityapaul.official@outlook.com
+Install dependencies using:
