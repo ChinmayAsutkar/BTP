@@ -100,4 +100,4 @@ Monogaze1/
 
 ## Requirements
 
-Install dependencies using:
+Install dependencies using: pip install -r requirements.txt
